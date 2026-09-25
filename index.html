@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Yuva Payana 2026 – Team 07</title>
+  <meta name="theme-color" content="#fbf7ee">
+  <meta name="description" content="Meet Team 07 of Yuva Payana 2026: our mentor, leaders and participants.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314284b'/%3E%3Ctext x='50' y='64' font-size='42' text-anchor='middle' fill='%23e0b04a' font-family='Georgia,serif'%3E07%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <header class="topbar">
+    <a class="brand" href="#home" data-go="home" aria-label="Back to the welcome page">
+      <span class="logo"><span class="logo-fallback">YP</span><img data-logo alt=""></span>
+      <span class="brand-text"><strong id="brandEvent">Yuva Payana 2026</strong><small id="brandTeam">Team 07</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#home" data-go="home" data-nav="home">Home</a>
+      <a href="#mentor" data-go="mentor" data-nav="mentor">Mentor</a>
+      <a href="#leaders" data-go="leaders" data-nav="leaders">Leaders</a>
+      <a href="#participants" data-go="participants" data-nav="participants">Participants</a>
+      <a href="#team" data-go="team" data-nav="team">Our Team</a>
+    </nav>
+  </header>
+
+  <!-- Sections are drawn by script.js from the TEAM data -->
+  <main id="app">
+    <section class="view" id="home"></section>
+    <section class="view" id="mentor"></section>
+    <section class="view" id="leaders"></section>
+    <section class="view" id="participants"></section>
+    <section class="view" id="team"></section>
+  </main>
+
+  <!-- Team journey tracker -->
+  <footer class="journey" aria-label="Team journey">
+    <ol id="journey">
+      <li><button type="button" data-go="mentor"><span class="dot"></span><span class="lbl">Mentor</span></button></li>
+      <li><button type="button" data-go="leaders"><span class="dot"></span><span class="lbl">Leaders</span></button></li>
+      <li><button type="button" data-go="participants"><span class="dot"></span><span class="lbl">Participants</span></button></li>
+      <li><button type="button" data-go="team"><span class="dot"></span><span class="lbl">Our Journey</span></button></li>
+    </ol>
+  </footer>
+
+  <!-- Participant profile card -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="profile" role="dialog" aria-modal="true" aria-labelledby="pname">
+      <button class="close" type="button" data-close aria-label="Close profile">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="profile-body" id="profileBody"></div>
+      <div class="profile-nav">
+        <button class="btn ghost" type="button" data-step="-1">&larr; Previous</button>
+        <span id="profileCount" aria-live="polite"></span>
+        <button class="btn ghost" type="button" data-step="1">Next &rarr;</button>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
